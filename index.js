@@ -27,12 +27,12 @@ async function run() {
     const wishlist = client.db("assignment-11").collection("wishlist");
     const comment = client.db("assignment-11").collection("comment");
     
-  //   app.post('/comment',async(req,res)=>{
-  //     const newuser=req.body;
-  //     console.log(newuser)
-  //     const result = await comment.insertOne(newuser);
-  //       res.send(result)
-  // })
+    app.post('/comment',async(req,res)=>{
+      const newuser=req.body;
+      console.log(newuser)
+      const result = await comment.insertOne(newuser);
+        res.send(result)
+  })
   //   app.get('/comment',async(req,res)=>{
   //       const getuser=comment.find()
   //       const result= await getuser.toArray()
