@@ -45,12 +45,12 @@ async function run() {
         console.log(result)
         res.send(result)
       })
-    // app.get('/wishlist_data',async(req,res)=>{
-    //     const getuser=wishlist.find()
-    //     const result= await getuser.toArray()
-    //     console.log(result)
-    //     res.send(result)
-    //   })
+    app.get('/wishlist_data',async(req,res)=>{
+        const getuser=wishlist.find()
+        const result= await getuser.toArray()
+        console.log(result)
+        res.send(result)
+      })
     app.post('/datas',async(req,res)=>{
         const newuser=req.body;
         const oldDate = new Date('2023-11-05T10:30:00.000Z');
