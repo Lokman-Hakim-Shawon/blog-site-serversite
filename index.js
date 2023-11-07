@@ -79,13 +79,13 @@ async function run() {
       res.send(result)
     })
     app.post('/wishlist_data',async(req,res)=>{
-        const newuser=req.body;
+        const newusers=req.body;
         const oldDate = new Date('2023-11-05T10:30:00.000Z');
         const newDate=new Date()
         const totalMinutes = Math.floor((oldDate - newDate) / 1000);
-        newuser.postDate=totalMinutes
-        console.log(newuser)
-        const result = await wishlist.insertOne(newuser);
+        newusers.postDate=totalMinutes
+        console.log(newusers)
+        const result = await wishlist.insertOne(newusers);
         res.send(result)
     })
     // app.delete('/wishlist_data/:id',async(req,res)=>{
