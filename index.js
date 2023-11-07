@@ -1,13 +1,10 @@
-// const express=require('express')
-// const cors=require('cors')
-// require('dotenv').config()
-// const app=express()
-// const port =process.env.PORT || 5000
-// app.use(cors())
-// app.use(express.json())
-
-// // wkL7SQ1pb7x8zMZS
-// // assignment-11
+const express=require('express')
+const cors=require('cors')
+require('dotenv').config()
+const app=express()
+const port =process.env.PORT || 5000
+app.use(cors())
+app.use(express.json())
 
 
 // const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
