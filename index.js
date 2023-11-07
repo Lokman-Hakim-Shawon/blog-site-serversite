@@ -61,23 +61,23 @@ async function run() {
         const result = await database.insertOne(newuser);
         res.send(result)
     })
-    // app.put('/datas/:id',async(req,res)=>{
-    //   const id=req.params.id
-    //   const filter={_id: new ObjectId(id)}
-    //   const options={upsert: true}
-    //   const update=req.body
-    //   const updateuser={
-    //     $set:{
-    //       image:update.image,
-    //       title:update.title,
-    //       category:update.category,
-    //       shortDes:update.shortDes,
-    //       longDes:update.longDes
-    //     }
-    //   }
-    //   const result=await database.updateOne(filter,updateuser,options)
-    //   res.send(result)
-    // })
+    app.put('/datas/:id',async(req,res)=>{
+      const id=req.params.id
+      const filter={_id: new ObjectId(id)}
+      const options={upsert: true}
+      const update=req.body
+      const updateuser={
+        $set:{
+          image:update.image,
+          title:update.title,
+          category:update.category,
+          shortDes:update.shortDes,
+          longDes:update.longDes
+        }
+      }
+      const result=await database.updateOne(filter,updateuser,options)
+      res.send(result)
+    })
     app.post('/wishlist_data',async(req,res)=>{
         const newuser=req.body;
         const oldDate = new Date('2023-11-05T10:30:00.000Z');
