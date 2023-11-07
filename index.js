@@ -33,12 +33,12 @@ async function run() {
       const result = await comment.insertOne(newuser);
         res.send(result)
   })
-  //   app.get('/comment',async(req,res)=>{
-  //       const getuser=comment.find()
-  //       const result= await getuser.toArray()
-  //       console.log(result)
-  //       res.send(result)
-  //     })
+    app.get('/comment',async(req,res)=>{
+        const getuser=comment.find()
+        const result= await getuser.toArray()
+        console.log(result)
+        res.send(result)
+      })
     app.get('/datas',async(req,res)=>{
         const getuser=database.find()
         const result= await getuser.toArray()
