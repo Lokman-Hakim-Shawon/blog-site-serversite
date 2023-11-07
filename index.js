@@ -39,12 +39,12 @@ async function run() {
   //       console.log(result)
   //       res.send(result)
   //     })
-    // app.get('/datas',async(req,res)=>{
-    //     const getuser=database.find()
-    //     const result= await getuser.toArray()
-    //     console.log(result)
-    //     res.send(result)
-    //   })
+    app.get('/datas',async(req,res)=>{
+        const getuser=database.find()
+        const result= await getuser.toArray()
+        console.log(result)
+        res.send(result)
+      })
     // app.get('/wishlist_data',async(req,res)=>{
     //     const getuser=wishlist.find()
     //     const result= await getuser.toArray()
